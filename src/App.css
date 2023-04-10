@@ -8,6 +8,7 @@
 .container {
   display: flex;
   height: 80vh;
+  min-width: 50%;
   border: 1px solid grey;
   padding: 20px;
   flex-direction: column;
