@@ -69,6 +69,10 @@ button {
 .todoText {
   flex: 1;
   margin: 0 5px;
+  /* word-wrap: break-word; */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .todoStatus {
   display: flex;
