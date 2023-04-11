@@ -65,7 +65,7 @@ const App = () => {
             type="text" 
             value={todo}
             onChange={(e)=>setTodo(e.target.value)} />
-          <button type="submit">{editId ? "Edit":"Go"}</button>
+          <button type="submit" className="go">{editId ? "Edit":"Go"}</button>
         </form>
         <ul className="allTodos">
           {todos.map((t) => (
@@ -73,8 +73,8 @@ const App = () => {
               <input onClick={()=>handleCheck(t.id)} type="checkbox" className="checkBox" checked={t.status ==="completed"} readOnly></input>      
               <span className="todoText" key={t.id} >{t.todo}</span>
               <span className="todoStatus">{t.status}</span>
-              <button onClick={()=>handleEdit(t.id)}>Edit</button>   
-              <button onClick={()=>handleDelete(t.id)}>Delete</button>
+              <button onClick={()=>handleEdit(t.id)} className="edit">Edit</button>   
+              <button onClick={()=>handleDelete(t.id)} className="delete"  >Delete</button>
               </li>
             ))}                 
         </ul>
