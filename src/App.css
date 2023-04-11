@@ -34,7 +34,7 @@
   justify-content: space-around;
   width: 98%;
 }
-input {
+input:not(.checkBox) {
   width: 80%;
   padding: 10px;
   border-radius: 20px;
@@ -66,4 +66,23 @@ button {
 }
 .todoText {
   flex: 1;
+  margin: 0 5px;
+}
+.todoStatus {
+  display: flex;
+  padding: 3px;
+  height: 15px;
+  width: 25%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.7rem;
+  background-color: red;
+}
+.completed .todoStatus {
+  background-color: green;
+}
+.completed .todoText {
+  text-decoration: line-through;
 }
