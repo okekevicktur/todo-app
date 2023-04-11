@@ -8,7 +8,7 @@
 .container {
   display: flex;
   height: 80vh;
-  min-width: 50%;
+  width: 75%;
   border: 1px solid grey;
   padding: 20px;
   flex-direction: column;
@@ -17,6 +17,7 @@
   color: white;
   overflow: hidden;
   overflow-y: scroll;
+  border-radius: 12px;
 }
 .container::-webkit-scrollbar {
   width: 5px;
@@ -54,6 +55,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 95%;
 }
 .singleTodo {
   border-radius: 30px;
