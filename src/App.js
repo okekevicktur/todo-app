@@ -69,6 +69,7 @@ const App = () => {
           <input 
             type="text" 
             value={todo}
+            placeholder="type your todo"
             onChange={(e)=>setTodo(e.target.value)} />
           <button type="submit" className="go">{editId ? "Edit":"Go"}</button>
         </form>
