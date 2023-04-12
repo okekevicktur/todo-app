@@ -48,10 +48,10 @@ input:not(.checkBox) {
 
 button {
   border: none;
-  border-radius: 10px;
-  padding: 6px;
+  border-radius: 5px;
+  padding: 4px;
   margin: 0 5px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .go {
   border: none;
@@ -93,12 +93,20 @@ button {
   overflow: hidden;
   overflow-y: scroll;
 }
+.icons {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.header {
+  display: flex;
+}
 .singleTodo {
   border-radius: 10px;
   margin: 10px 0;
   background-color: #111e38;
   padding: 6px 8px;
-  display: flex;
+  /* display: flex; */
   align-items: center;
   width: 90%;
 }
@@ -112,15 +120,15 @@ button {
 }
 .todoStatus {
   display: flex;
-  padding: 3px;
-  height: 15px;
-  width: 20%;
+  padding: 4px 5px;
+  height: 10px;
+  width: auto;
   align-items: center;
   text-align: center;
-  justify-content: center;
+
   border-radius: 8px;
   font-size: 0.7rem;
-  background-color: red;
+  background-color: rgb(143, 8, 8);
   margin-right: 5px;
 }
 .completed .todoStatus {

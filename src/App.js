@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import "./App.css";
 
 
@@ -36,6 +39,8 @@ const App = () => {
   const handleDelete = (id) => {
     const delTodos = todos.filter((to)=>to.id !== id);
     setTodos([...delTodos]);
+    setEditId(0);
+        setTodo("");
   };
   const handleCheck = (id) => {
     const checkedTodo = todos.find((t)=>t.id === id);
@@ -70,11 +75,20 @@ const App = () => {
         <ul className="allTodos">
           {todos.map((t) => (
               <li className={`singleTodo ${t.status}`} key={t.id}>
-              <input onClick={()=>handleCheck(t.id)} type="checkbox" className="checkBox" checked={t.status ==="completed"} readOnly></input>      
-              <span className="todoText" key={t.id} >{t.todo}</span>
-              <span className="todoStatus">{t.status}</span>
-              <button onClick={()=>handleEdit(t.id)} className="edit">Edit</button>   
-              <button onClick={()=>handleDelete(t.id)} className="delete"  >Delete</button>
+                <div className='header'>
+                  <input onClick={()=>handleCheck(t.id)} type="checkbox" className="checkBox" checked={t.status ==="completed"} readOnly></input>      
+                  <span className="todoText" key={t.id} >{t.todo}</span>
+                </div>
+              
+                <div className="icons">
+                  <span className="todoStatus">{t.status}</span>
+                  <button onClick={()=>handleEdit(t.id)} className="edit">
+                  <FontAwesomeIcon icon={faPenToSquare} />
+                  </button>   
+                  <button onClick={()=>handleDelete(t.id)} className="delete"  >
+                  <FontAwesomeIcon icon={faTrashCan} />
+                  </button>
+                </div>           
               </li>
             ))}                 
         </ul>
